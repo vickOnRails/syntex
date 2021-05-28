@@ -1,34 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Syntex
 
-## Getting Started
+Syntex is a self-hosted, open source web application for storing notes from the internet all in one place.
 
-First, run the development server:
+## Why I'm building syntex
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+There're lots of life changing articles on the internet. When I come accross one, I don't ever want to loose it. I quickly write about them on my blog. I thought it would be cool to build a site to store all these notes together.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I thought it would also be nice to have a browser extension so it makes it easy to collect these little notes. I hope there're people like who'll find this project useful too.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Features
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Open source, Self hosted, Secure
+- Serverside rendered with Nextjs
+- Serverless functions for interacting with a mongodb
+- One click deploy to netlify, Vercel, AWS
+- Chrome extension for collecting notes from the internet
+- Simple & Universal authentication with 0Auth
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Setting up
 
-## Learn More
+Coming soon ⚡⚡⚡
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Coming soon ⚡⚡⚡
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Roadmap for V1
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [ ] 🔧 Setup Github - issues, project, etc
+- [ ] 🏆 Release V1 of chrome extension
+- [ ] ⚛ Build client in Nextjs with serverless functions
+- [ ] 🔒 Implement authentication
+- [ ] ⚡ One click deploy to netlify, vercel or AWS
