@@ -1,4 +1,6 @@
 import React, { FC, HTMLAttributes } from "react";
+import { useSession } from "next-auth/client";
+import { Session } from "next-auth";
 import styled from "@emotion/styled";
 
 const AuthWrapper: FC<AUthWrapperProps> = ({ children }) => {

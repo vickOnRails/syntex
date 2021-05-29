@@ -10,9 +10,9 @@ import { Header, Logo } from "../components";
  * @returns JSX.Element
  */
 
-const Layout: FC<LayoutProps> = ({ children, ...props }) => {
+const Layout: FC<LayoutProps> = ({ children, loading, ...props }) => {
   return (
-    <StyledLayout>
+    <StyledLayout {...props}>
       <Header>
         <Logo />
         <Flex alignItems="center" className="right-nav">
@@ -45,12 +45,14 @@ const Layout: FC<LayoutProps> = ({ children, ...props }) => {
           </FlexItem>
         </Flex>
       </Header>
-      <main>{children}</main>
+      {loading ? <p>Loading...</p> : <main>{children}</main>}
     </StyledLayout>
   );
 };
 
-interface LayoutProps extends HTMLAttributes<HTMLElement> {}
+interface LayoutProps extends HTMLAttributes<HTMLElement> {
+  loading?: boolean;
+}
 
 const StyledLayout = styled.div`
   main {

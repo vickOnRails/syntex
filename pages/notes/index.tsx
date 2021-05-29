@@ -1,10 +1,11 @@
-import React, { FC } from "react";
+import React, { FC, useState, useEffect } from "react";
 import { Text, Button, Heading } from "@avocado-ui/react";
 import { useRouter } from "next/router";
 
-import { signOut, signIn, useSession } from "next-auth/client";
+import { signOut, signIn, useSession, getSession } from "next-auth/client";
 
 import { Layout, AuthWrapper } from "../../components";
+import { GetServerSideProps } from "next";
 
 /**
  * Notes - Returns all notes to the /notes page
@@ -12,41 +13,56 @@ import { Layout, AuthWrapper } from "../../components";
  */
 
 const Notes: FC = (props) => {
-  console.log(props);
   const [session, loading] = useSession();
-  const router = useRouter();
+  const [notes, setNotes] = useState<any>([]);
 
-  if (loading)
-    return (
-      <AuthWrapper>
-        <p>Loading...</p>
-      </AuthWrapper>
-    );
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch("/api/notes");
+      const jsonRes = await res.json();
 
-  if (!session) {
-    //   So we can't directly redirect here becayse the router package can only be used on a client page
-    // To change that, we have to return something. Or maybe change the page to a clientside rendered application
-    return (
-      <AuthWrapper>
-        <Heading level="h3">Not Signed In</Heading>
-        {/* @ts-ignore */}
-        <Button onClick={signIn}>Sign In</Button>
-      </AuthWrapper>
-    );
-  }
+      const { notes } = jsonRes;
+
+      if (jsonRes) {
+        setNotes(notes);
+      }
+    };
+
+    fetchData();
+
+    // return () => {
+    //   cleanup;
+    // };
+  }, [session]);
 
   return (
-    <Layout>
-      <Text>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore delectus
-        et corrupti cum quas iusto harum perferendis, sapiente blanditiis error
-        suscipit vitae molestiae vero ullam. Tempora magni laboriosam natus
-        praesentium!
-      </Text>
-
-      <Button onClick={() => signOut()}>Sign Out</Button>
+    <Layout loading={loading}>
+      <main>
+        {notes.map((note: any) => (
+          <p>{note.title}</p>
+        ))}
+      </main>
     </Layout>
   );
+};
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const { req } = context;
+
+  const session = await getSession({ req });
+
+  if (!session) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: "/auth/sign-in",
+      },
+    };
+  }
+
+  return {
+    props: {},
+  };
 };
 
 export default Notes;
