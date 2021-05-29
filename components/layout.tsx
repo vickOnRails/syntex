@@ -1,6 +1,7 @@
 import React, { FC, HTMLAttributes } from "react";
 import styled from "@emotion/styled";
 import { Button, Flex, FlexItem } from "@avocado-ui/react";
+import { signOut } from "next-auth/client";
 
 import { Header, Logo } from "../components";
 
@@ -16,7 +17,7 @@ const Layout: FC<LayoutProps> = ({ children, ...props }) => {
         <Logo />
         <Flex alignItems="center" className="right-nav">
           <FlexItem>
-            <Button>Log out</Button>
+            <Button onClick={() => signOut()}>Log out</Button>
           </FlexItem>
 
           <FlexItem>
