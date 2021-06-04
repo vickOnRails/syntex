@@ -3,9 +3,10 @@ import { Text, Button, Heading } from "@avocado-ui/react";
 
 import { useSession, getSession } from "next-auth/client";
 
-import { Layout, AuthWrapper } from "../../components";
+import { Layout, AuthWrapper, NotePreview } from "../../components";
 import { GetServerSideProps } from "next";
 import Link from "next/link";
+import { INote } from "../../types/types";
 
 /**
  * Notes - Returns all notes to the /notes page
@@ -13,37 +14,13 @@ import Link from "next/link";
  */
 
 const Notes: FC = (props) => {
-  const [session, loading] = useSession();
-  const [notes, setNotes] = useState<any>([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch("/api/notes");
-      const jsonRes = await res.json();
-
-      const { notes } = jsonRes;
-
-      if (jsonRes) {
-        setNotes(notes);
-      }
-    };
-
-    fetchData();
-
-    // return () => {
-    //   cleanup;
-    // };
-  }, [session]);
-
+  //@ts-ignore
+  const { notes } = props;
   return (
-    <Layout loading={loading}>
+    <Layout>
       <main>
-        {notes.map((note: any) => {
-          return (
-            <Link href={`notes/${note.articleId}`}>
-              <a>{note.title}</a>
-            </Link>
-          );
+        {notes.map((note: INote) => {
+          return <NotePreview note={note} />;
         })}
       </main>
     </Layout>
@@ -64,8 +41,13 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     };
   }
 
+  const notesResponse = await fetch("http://localhost:3000/api/notes");
+  const { notes } = await notesResponse.json();
+
   return {
-    props: {},
+    props: {
+      notes,
+    },
   };
 };
 

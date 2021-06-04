@@ -6,7 +6,7 @@ export const notes = [
     url: "https://victorofoegbu.com/",
     title: "Hi there, welcome to my internet garden 🌵",
     articleId: "60afb4567e9a2d064854b94c",
-    notes: [
+    quotes: [
       {
         _id: "60afb4567e9a2d064854b94c",
         title: "Hi there, welcome to my internet garden 🌵",
@@ -24,7 +24,7 @@ export const notes = [
     url: "https://victorofoegbu.com/notes/pass-props-to-react-children-faq",
     title: "How To Pass Props to {react.children} - React FAQ",
     articleId: "60afb4747e9a2d064854b94d",
-    notes: [
+    quotes: [
       {
         _id: "60afb4747e9a2d064854b94d",
         title: "How To Pass Props to {react.children} - React FAQ",
@@ -75,7 +75,7 @@ export const notes = [
     url: "https://victorofoegbu.com/notes/how-necessary-are-the-programming-fundamentals",
     title: "Learning Notes - How necessary are the programming fundamentals?",
     articleId: "60afb4cf7e9a2d064854b951",
-    notes: [
+    quotes: [
       {
         _id: "60afb4cf7e9a2d064854b951",
         title:
