@@ -31,8 +31,18 @@ interface NotePreviewProps {
 }
 
 const StyledNotePreview = styled(FlexItem)`
+  margin-bottom: 1.5em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--gray-01);
+
   a {
+    display: block;
     text-decoration: none;
+  }
+
+  a:hover h2 {
+    text-decoration: underline;
+    color: var(--accent-color);
   }
 
   @media (min-width: 690px) {

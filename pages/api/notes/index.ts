@@ -114,6 +114,92 @@ export const notes = [
       },
     ],
   },
+  {
+    url: "https://victorofoegbu.com/notes/how-necessary-are-the-programming-fundamentals",
+    title: "Learning Notes - How necessary are the programming fundamentals?",
+    articleId: "60afb4cf7e9a2d064854b951",
+    quotes: [
+      {
+        _id: "60afb4cf7e9a2d064854b951",
+        title:
+          "Learning Notes - How necessary are the programming fundamentals?",
+        url: "https://victorofoegbu.com/notes/how-necessary-are-the-programming-fundamentals",
+        quote:
+          "Details of music theory will only become relevant when the person starts wanting to compose their own songs.",
+        comments: "Okay Okay",
+        createdAt: "2021-05-27T15:03:43.751Z",
+        updatedAt: "2021-05-27T15:03:43.751Z",
+        __v: 0,
+      },
+      {
+        _id: "60afb4dd7e9a2d064854b952",
+        title:
+          "Learning Notes - How necessary are the programming fundamentals?",
+        url: "https://victorofoegbu.com/notes/how-necessary-are-the-programming-fundamentals",
+        quote:
+          'These are exactly the benefits that learning CS Fundamentals provide you in everyday programming. Even though you\'re not "composing your own algorithms", your knowledge of how computer science works provides a serious boost to your programming ability in general. The difference between music and programming is what exactly is "boosted": While a musician that knows the theory will be better at designing and understanding music, a programmer who knows the theory will be better at designing and understanding systems. A person who doesn\'t know programming theory is perfectly capable of creating a good product from the user point of view, but it\'s likely that they will be severely hindered from a system design point of view.',
+        comments: "Something Light",
+        createdAt: "2021-05-27T15:03:57.659Z",
+        updatedAt: "2021-05-27T15:03:57.659Z",
+        __v: 0,
+      },
+      {
+        _id: "60afb4f37e9a2d064854b953",
+        title:
+          "Learning Notes - How necessary are the programming fundamentals?",
+        url: "https://victorofoegbu.com/notes/how-necessary-are-the-programming-fundamentals",
+        quote:
+          "It's important to understand however what it's meant by system design in this case; We are not talking about concepts like clean code and SOLID, but how correct your code is from a design, performance, and resource management point of view. Note that correctly doesn't mean \"this code must use this ultra-fast obscure algorithm a Russian man published in 1970, otherwise it's wrong\", it simply means that the code you're writing makes sense from an engineering standpoint. I'm gonna say it again: Stop thinking that the fundamentals are only about coding obscure algorithms!",
+        comments: "Okay Okay Okay",
+        createdAt: "2021-05-27T15:04:19.791Z",
+        updatedAt: "2021-05-27T15:04:19.791Z",
+        __v: 0,
+      },
+    ],
+  },
+  {
+    url: "https://victorofoegbu.com/notes/how-necessary-are-the-programming-fundamentals",
+    title: "Learning Notes - How necessary are the programming fundamentals?",
+    articleId: "60afb4cf7e9a2d064854b951",
+    quotes: [
+      {
+        _id: "60afb4cf7e9a2d064854b951",
+        title:
+          "Learning Notes - How necessary are the programming fundamentals?",
+        url: "https://victorofoegbu.com/notes/how-necessary-are-the-programming-fundamentals",
+        quote:
+          "Details of music theory will only become relevant when the person starts wanting to compose their own songs.",
+        comments: "Okay Okay",
+        createdAt: "2021-05-27T15:03:43.751Z",
+        updatedAt: "2021-05-27T15:03:43.751Z",
+        __v: 0,
+      },
+      {
+        _id: "60afb4dd7e9a2d064854b952",
+        title:
+          "Learning Notes - How necessary are the programming fundamentals?",
+        url: "https://victorofoegbu.com/notes/how-necessary-are-the-programming-fundamentals",
+        quote:
+          'These are exactly the benefits that learning CS Fundamentals provide you in everyday programming. Even though you\'re not "composing your own algorithms", your knowledge of how computer science works provides a serious boost to your programming ability in general. The difference between music and programming is what exactly is "boosted": While a musician that knows the theory will be better at designing and understanding music, a programmer who knows the theory will be better at designing and understanding systems. A person who doesn\'t know programming theory is perfectly capable of creating a good product from the user point of view, but it\'s likely that they will be severely hindered from a system design point of view.',
+        comments: "Something Light",
+        createdAt: "2021-05-27T15:03:57.659Z",
+        updatedAt: "2021-05-27T15:03:57.659Z",
+        __v: 0,
+      },
+      {
+        _id: "60afb4f37e9a2d064854b953",
+        title:
+          "Learning Notes - How necessary are the programming fundamentals?",
+        url: "https://victorofoegbu.com/notes/how-necessary-are-the-programming-fundamentals",
+        quote:
+          "It's important to understand however what it's meant by system design in this case; We are not talking about concepts like clean code and SOLID, but how correct your code is from a design, performance, and resource management point of view. Note that correctly doesn't mean \"this code must use this ultra-fast obscure algorithm a Russian man published in 1970, otherwise it's wrong\", it simply means that the code you're writing makes sense from an engineering standpoint. I'm gonna say it again: Stop thinking that the fundamentals are only about coding obscure algorithms!",
+        comments: "Okay Okay Okay",
+        createdAt: "2021-05-27T15:04:19.791Z",
+        updatedAt: "2021-05-27T15:04:19.791Z",
+        __v: 0,
+      },
+    ],
+  },
 ];
 
 export default (req: any, res: any) => {

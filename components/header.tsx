@@ -29,7 +29,7 @@ interface HeaderProps extends HTMLAttributes<HTMLElement> {}
 
 const StuledHeader = styled.header`
   padding: 1em 0;
-
+  margin-bottom: 7em;
   .container {
     padding: 0 3%;
     max-width: 1300px;
