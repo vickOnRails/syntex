@@ -1,11 +1,11 @@
 import React, { FC, useState, useEffect } from "react";
 import { Text, Button, Heading } from "@avocado-ui/react";
-import { useRouter } from "next/router";
 
-import { signOut, signIn, useSession, getSession } from "next-auth/client";
+import { useSession, getSession } from "next-auth/client";
 
 import { Layout, AuthWrapper } from "../../components";
 import { GetServerSideProps } from "next";
+import Link from "next/link";
 
 /**
  * Notes - Returns all notes to the /notes page
@@ -38,9 +38,13 @@ const Notes: FC = (props) => {
   return (
     <Layout loading={loading}>
       <main>
-        {notes.map((note: any) => (
-          <p>{note.title}</p>
-        ))}
+        {notes.map((note: any) => {
+          return (
+            <Link href={`notes/${note.articleId}`}>
+              <a>{note.title}</a>
+            </Link>
+          );
+        })}
       </main>
     </Layout>
   );

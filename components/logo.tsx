@@ -9,7 +9,7 @@ import styled from "@emotion/styled";
 const Logo = () => {
   return (
     <StyledLogo>
-      <Link href="/">
+      <Link href="/notes">
         <a>Syntex.</a>
       </Link>
     </StyledLogo>

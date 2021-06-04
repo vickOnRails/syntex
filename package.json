@@ -11,6 +11,8 @@
     "@avocado-ui/react": "^0.1.20",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
+    "@types/mongodb": "^3.6.17",
+    "mongodb": "^3.6.9",
     "next": "10.2.3",
     "next-auth": "^3.24.0",
     "react": "17.0.2",
