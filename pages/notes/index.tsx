@@ -1,11 +1,11 @@
-import React, { FC, useState, useEffect } from "react";
-import { Text, Button, Heading } from "@avocado-ui/react";
+import React, { FC } from "react";
+import { Flex } from "@avocado-ui/react";
+import styled from "@emotion/styled";
 
-import { useSession, getSession } from "next-auth/client";
+import { getSession } from "next-auth/client";
 
-import { Layout, AuthWrapper, NotePreview } from "../../components";
+import { Layout, NotePreview } from "../../components";
 import { GetServerSideProps } from "next";
-import Link from "next/link";
 import { INote } from "../../types/types";
 
 /**
@@ -18,14 +18,26 @@ const Notes: FC = (props) => {
   const { notes } = props;
   return (
     <Layout>
-      <main>
+      <StyledFlexContainer justifyContent="space-between" flexWrap="wrap">
         {notes.map((note: INote) => {
           return <NotePreview note={note} />;
         })}
-      </main>
+      </StyledFlexContainer>
     </Layout>
   );
 };
+
+const StyledFlexContainer = styled(Flex)`
+  flex-direction: column;
+
+  blockquote {
+    font-size: 0.85em;
+  }
+
+  @media (min-width: 690px) {
+    flex-direction: row;
+  }
+`;
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { req } = context;

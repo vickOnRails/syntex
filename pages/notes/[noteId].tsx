@@ -10,6 +10,7 @@ import { Layout } from "../../components";
  * @returns JSX>Element
  */
 const Note: FC = (props) => {
+  //FIXME: use appropriate types
   // @ts-ignore
   const { note } = props;
   return <Layout>{JSON.stringify(note)}</Layout>;

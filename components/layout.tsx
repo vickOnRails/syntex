@@ -58,7 +58,7 @@ const StyledLayout = styled.div`
   main {
     padding: 0 3%;
     margin: 0 auto;
-    max-width: 1300px;
+    max-width: 1200px;
   }
   .right-nav button {
     margin-right: 0.5em;
