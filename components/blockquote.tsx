@@ -14,7 +14,7 @@ Blockquote.defaultProps = {
 };
 
 const StyledBlockquote = styled.blockquote<BlockquoteProps>`
-  border-left: ${(props) => `3px solid ${props.accentColor}`};
+  border-left: ${(props) => `4px solid ${props.accentColor}`};
   padding: 0.75em;
   background: var(--gray-01);
   border-radius: 6px;

@@ -1,20 +1,52 @@
-import React, { FC } from "react";
-import { useRouter } from "next/router";
+import React from "react";
 import { GetServerSideProps } from "next";
 import { getSession } from "next-auth/client";
+import styled from "@emotion/styled";
 
-import { Layout } from "../../components";
+import { Blockquote, Layout, Separator } from "../../components";
+import { INote } from "../../types/types";
+import { Heading, Text } from "@avocado-ui/react";
 
 /**
  * Note - Renders individual note
  * @returns JSX>Element
  */
-const Note: FC = (props) => {
-  //FIXME: use appropriate types
-  // @ts-ignore
-  const { note } = props;
-  return <Layout>{JSON.stringify(note)}</Layout>;
+const Note = ({ note }: { note: INote[] }) => {
+  const { quotes } = note[0];
+  return (
+    <StyledContentLayout>
+      <section>
+        <Heading level="h1">{note[0].title}</Heading>
+
+        {quotes.map((quote) => (
+          <article>
+            <Text>{quote.comments}</Text>
+            <Blockquote>{quote.quote}</Blockquote>
+            <Separator />
+          </article>
+        ))}
+      </section>
+    </StyledContentLayout>
+  );
 };
+
+const StyledContentLayout = styled(Layout)`
+  section {
+    max-width: 45em;
+  }
+
+  h1 {
+    line-height: 1.1em;
+    margin-bottom: 1.2em;
+  }
+
+  blockquote {
+    margin-bottom: 1.5em;
+  }
+  article {
+    margin-bottom: 1.5em;
+  }
+`;
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { req, params } = context;
